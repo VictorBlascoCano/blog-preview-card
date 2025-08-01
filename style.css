@@ -1,3 +1,14 @@
+:root {
+	--color-white: hsl(0, 0%, 100%);
+	--color-grey: hsl(30, 10%, 34%);
+	--color-blue: hsl(228, 45%, 44%);
+	--color-yellow: hsl(47, 88%, 63%);
+	--color-gray-500: hsl(0, 0%, 42%);
+	--color-gray-950: hsl(0, 0%, 7%);
+
+	--ff-figtree: "Figtree", sans-serif;
+}
+
 @font-face {
 	font-family: "Figtree";
 	src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
@@ -7,14 +18,14 @@
 *::before,
 *::after {
 	box-sizing: border-box;
-	font-family: "Figtree", sans-serif;
+	font-family: var(--ff-figtree);
 	font-weight: 500;
 }
 
 body {
 	margin: 0;
 	min-height: 100dvh;
-	background-color: hsl(47, 88%, 63%);
+	background-color: var(--color-yellow);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -25,15 +36,15 @@ body {
 	font-size: 11px;
 	text-align: center;
 	margin-top: 12px;
-	color: hsl(30, 10%, 34%);
+	color: var(--color-grey);
 	& a {
-		color: hsl(228, 45%, 44%);
+		color: var(--color-blue);
 	}
 }
 
 .card {
 	padding: 25px;
-	background-color: hsl(0, 0%, 100%);
+	background-color: var(--color-white);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -57,12 +68,12 @@ body {
 }
 
 .card:hover .content h1 {
-	color: hsl(47, 88%, 63%);
+	color: var(--color-yellow);
 }
 
 .attributes {
 	padding: 5px 15px;
-	background-color: hsl(47, 88%, 63%);
+	background-color: var(--color-yellow);
 	font-weight: 800;
 	border-radius: 5px;
 }
@@ -89,6 +100,6 @@ h1 {
 
 .content p {
 	font-size: 16px;
-	color: hsl(0, 0%, 42%);
+	color: var(--color-gray-500);
 	line-height: 1.5em;
 }
